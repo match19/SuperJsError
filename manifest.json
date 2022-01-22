@@ -1,7 +1,7 @@
 {
   "name": "Super JS error",
   "version": "0.1",
-  "description": "Show console errors directly in the webpage",
+  "description": "Receive notifications when console errors appear! :)",
   "icons": {
     "16": "/icons/icon16.png",
     "32": "/icons/icon32.png",
