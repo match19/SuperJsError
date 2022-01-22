@@ -1,0 +1,21 @@
+{
+  "name": "Super JS error",
+  "version": "0.1",
+  "description": "Show console errors directly in the webpage",
+  "manifest_version": 2,
+  "web_accessible_resources": ["/src/console-listener.js", "notifications.js"
+],
+  "permissions": ["tabs", "webRequest"],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "run_at": "document_start",
+      "css": [
+        "/src/notifications.css" ],
+      "js": [
+        "contentScript.js",
+        "notifications.js" ]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}
