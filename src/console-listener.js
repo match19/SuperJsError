@@ -13,6 +13,9 @@ console.error = (...data) => {
 }
 
 window.onerror = (err) => {
+  if (err == "Uncaught EvalError: Possible side-effect in debug-evaluate" || err.includes("SyntaxError",)) {
+    return;
+  }
   const myNotification = window.createNotification({
     theme: 'error',
     showDuration: 5000
